@@ -1,0 +1,155 @@
+*{
+    font-family: "Poppins" , sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color:#fff;
+}
+
+main
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   background-color: rgb(53, 122, 155);
+   /*to display background*/
+   width: 100%;
+   min-height: 100vh;
+   perspective: 1000px; /*to make 3d*/
+  
+
+
+    /*viewport height == vh , 1vh == 1% viewport
+        viewport width == vw
+        100vw == 100% 
+    */
+}
+.two-faces{
+  
+ 
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.two-faces .card{
+    width: 380px;
+    height: 225px;
+    background-image:url(img/backg.png);
+    border-radius: 28px;
+   position: absolute;
+   padding : 20px;
+
+  
+
+} 
+.two-faces:hover{
+    transform: rotateY(180deg);
+}
+.card .header , .card .left-Side {
+    display: flex;
+    flex-direction: row;
+}
+.card .header{
+    justify-content: space-between;
+}
+.left-Side .logo {
+    width: 55px;
+    border-radius: 30px;
+    height: 30px;
+    margin-right: 15px;
+}
+.left-Side .master-card {
+    font-size: 15px;
+   
+    font-weight: bold;
+    margin-top: 3px;
+}
+.header .chip {
+    width: 55px;
+    border-radius: 5px;
+    height: 30px;
+}
+
+.card .card-info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 55px;
+}
+.card-info .cardName {
+    font-size: 12px
+}
+.card .personal-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 15px;
+
+}
+.personal-info .date {
+    display: flex;
+    flex-direction: column;
+}
+.personal-info > span {
+    margin-top: 5px;
+}
+
+/*/////////////////////////////////////second face*/
+
+
+.two-faces .second-face{
+    width: 380px;
+    height: 225px;
+    background-image:url(img/backg.png);
+    border-radius: 28px;
+   
+   padding : 20px;
+   transform: rotateY(180deg);
+   backface-visibility: hidden;
+
+} 
+
+.second-face h6 {
+    font-size: 8px;
+}
+.second-face .black {
+    height: 35px;
+    width: 100%;
+    background-color: #d97411;
+    position: absolute;
+    left: 0;
+    margin-top: 10px;
+}
+
+.second-face .infisable {
+   
+    height: 35px;
+    position: absolute;
+    top: 100px;
+    background-color: #fff;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    border-radius: 10px;
+    background-image: linear-gradient(to right, gray 50%, #fff);
+   
+}
+.second-face .infisable span {
+    color: #000;
+    margin-right: -28px;
+    border-radius: 5px;
+    background: #fff;
+    height: 21px;
+    padding: 3px 5px;
+    
+    font-size: 12px;
+    
+   
+}
+.second-face h5{
+    position: absolute;
+    top: 145px;
+    font-size: 10px;
+    text-align: justify;
+    margin-right: 25px;
+}
